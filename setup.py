@@ -15,5 +15,10 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3 :: Only'
     ],
-    keywords='distutils blender'
+    keywords='distutils blender',
+    entry_points={
+      'distutils.commands': [
+          'bdist_blender_addon=blender.distutils.bdist_blender_addon:bdist_blender_addon'
+          ]
+    }
 )

@@ -68,19 +68,6 @@ setup(
 )
 ```
 
-### Register the `bdist_blender_addon` command
-
-Registering `setup.py` custom commands is just a matter of including them in [`setup.cfg`](examples/info_example_distutils) under the `[global]` section.
-
-```
-# This is in setup.cfg
-
-[global]
-
-# This line adds the bdist_blender_addon command to setup.py
-command_packages = blender.distutils
-```
-
 ### Including third-party modules not shipped with blender
 
 The `bdist_blender_addon` command allows to include additional python modules that are not shipped with Blender. These modules will be included in the root folder of the addon. Currently an explicit list of modules, including their dependencies, needs to be configured.
