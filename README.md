@@ -1,6 +1,6 @@
 # Blender distutils commands
 
-This Python module adds a new command to (`distutils`)[https://docs.python.org/3/library/distutils.html] to build (Blender)[https://blender.org] addons: `bdist_blender_addon`. It also provides a simple mechanism to package extra modules not included with Blender's Python distribution within the addon.
+This Python module adds a new command to [`distutils`](https://docs.python.org/3/library/distutils.html) to build [Blender](https://blender.org) addons: `bdist_blender_addon`. It also provides a simple mechanism to package extra modules not included with Blender's Python distribution within the addon.
 
 ## Example
 
@@ -140,7 +140,7 @@ import dateutils
 
 The `bdist_blender_addon` command will copy the addon code, copy the additional modules over, clean unneeded files (like the `*.pyc` bytecode files) and package them all in a versioned zip archive under the `dist` folder.
 
-``` sh
+``` bash
 $ python setup.py bdist_blender_addon
 running bdist_blender_addon
 running build
@@ -153,8 +153,3 @@ creating build/lib/info_example_distutils/dateutil
 $ ls dist/
 info_example_distutils-v1.0.0.zip
 ```
-
-
-## Notes
-
-- Publish on PiPy
