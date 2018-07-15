@@ -1,7 +1,7 @@
 Blender distutils example
 =========================
 
-This example shows how to write the ```setup.py`` <setup.py>`__ of a
+This example shows how to write the `setup.py <https://python.org>`_ of a
 Blender addon using the ``blender.distutils`` module. It requires a
 Python module not shipped with Blender: ``dateutils``.
 
