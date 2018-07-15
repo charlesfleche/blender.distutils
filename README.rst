@@ -1,3 +1,6 @@
+.. image:: https://badge.fury.io/py/blender.distutils.svg
+    :target: https://badge.fury.io/py/blender.distutils
+
 Blender distutils commands
 ==========================
 
