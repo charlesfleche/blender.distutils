@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='blender.distutils',
-    version='1.0.0',
+    version='1.0.1',
     description='Blender distutils addon',
     long_description=open('README.md').read(),
     url='https://github.com/charlesfleche/blender.distutils',
