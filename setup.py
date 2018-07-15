@@ -4,7 +4,7 @@ setup(
     name='blender.distutils',
     version='1.0.2',
     description='Blender distutils addon',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     url='https://github.com/charlesfleche/blender.distutils',
     author='Charles Flèche',
     author_email='charles.fleche@free.fr',

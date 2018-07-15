@@ -4,7 +4,7 @@ setup(
     name='info_example_distutils',
     version='1.0.0',
     description='Blender example distutils',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     url='https://github.com/charlesfleche/blender.distutils/io_example_distutils',
     author='Charles Flèche',
     author_email='charles.fleche@free.fr',
