@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='blender.distutils',
@@ -15,6 +15,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3 :: Only'
     ],
+    packages=find_packages(),
     keywords='distutils blender',
     entry_points={
       'distutils.commands': [
