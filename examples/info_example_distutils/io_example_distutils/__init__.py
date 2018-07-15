@@ -31,7 +31,7 @@ bl_info = {
 }
 
 class ExampleDistutils(bpy.types.Operator):
-    bl_idname = 'export_scene.example_distutils'
+    bl_idname = 'info.example_distutils'
     bl_label = 'Example distutils'
 
     def execute(self, context):
