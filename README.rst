@@ -2,16 +2,12 @@ Blender distutils commands
 ==========================
 
 This Python module adds a new command to
-```distutils`` <https://docs.python.org/3/library/distutils.html>`__ to
-build `Blender <https://blender.org>`__ addons: ``bdist_blender_addon``.
-It also provides a simple mechanism to package extra modules not
-included with Blender's Python distribution within the addon.
+`distutils <https://docs.python.org/3/library/distutils.html>`_ to build `Blender <https://blender.org>`__ addons: ``bdist_blender_addon``. It also provides a simple mechanism to package extra modules not included with Blender's Python distribution within the addon.
 
 Example
 -------
 
-See the ```info_example_distutils`` <examples/info_example_distutils>`__
-addon to see how this ``distutils`` module is used.
+See the `info_example_distutils <examples/info_example_distutils>`_ addon to see how this ``distutils`` module is used.
 
 Installation
 ------------
@@ -26,8 +22,7 @@ The module is available on PiPy and installable with ``pip``.
     $ pip install blender.distutils
 
 It is suggested to add a
-```requirements.txt`` <examples/info_example_distutils/requirements.txt>`__
-file to the Blender addon plugin that lists the module dependencies.
+`requirements.txt <examples/info_example_distutils/requirements.txt>`_ file to the Blender addon plugin that lists the module dependencies.
 
 ::
 
@@ -46,18 +41,9 @@ file to the Blender addon plugin that lists the module dependencies.
 Add a simple ``setup.py`` to the blender addon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``bdist_blender_addon`` is a ``distutils`` command. As such, a
-``setup.py`` file is required. Addon name and version are defined by
-this file. I suggest using
-```bumpversion`` <https://github.com/peritus/bumpversion>`__ to keep
-``setup.py``, ``bl_info`` and your git tags in sync.
+The ``bdist_blender_addon`` is a ``distutils`` command. As such, a ``setup.py`` file is required. Addon name and version are defined by this file. I suggest using `bumpversion <https://github.com/peritus/bumpversion>`_ to keep ``setup.py``, ``bl_info`` and your git tags in sync.
 
-The ```setup.py`` <examples/info_example_distutils/setup.py>`__ for a
-blender addon is actually quite straightforward. The
-``install_requires`` argument should only list the first-level
-dependencies needed by the addon: those may require their own
-dependencies. The actual modules to be shipped with the addon are cherry
-picked in ``setup.cfg``.
+The `setup.py <examples/info_example_distutils/setup.py>`_ for a blender addon is actually quite straightforward. The ``install_requires`` argument should only list the first-level dependencies needed by the addon: those may require their own dependencies. The actual modules to be shipped with the addon are cherry picked in ``setup.cfg``.
 
 .. code:: python
 
