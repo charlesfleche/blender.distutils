@@ -4,6 +4,6 @@ blender.distutils
 
 # This module is required by the addon, but not distributed with blender
 # bdist_blender_addon will ship it if with the addon
-# Dependencies to be inclued are listed in setup.cfg
+# Dependencies to be included are listed in setup.cfg
 
 dateutils
