@@ -1,2 +1,4 @@
 bumpversion
+keyring
+twine
 wheel
