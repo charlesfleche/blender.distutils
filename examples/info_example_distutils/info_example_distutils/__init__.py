@@ -5,7 +5,7 @@ import os
 import site
 import sys
 
-# Register path to third-party modules according to VIRTUAL_ENV if defined
+
 def third_party_modules_sitedir():
     # If we are in a VIRTUAL_ENV, while developing for example, we want the
     # addon to hit the modules installed in the virtual environment

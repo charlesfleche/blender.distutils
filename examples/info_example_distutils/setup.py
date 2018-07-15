@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='io_example_distutils',
+    name='info_example_distutils',
     version='1.0.0',
     description='Blender example distutils',
     long_description=open('README.md').read(),
@@ -19,5 +19,9 @@ setup(
     ],
     packages=find_packages(),
     keywords='blender',
+
+    # Here are listed first level dependencies needed by the module. Themselves
+    # may require dependencies. The actual modules to be shipped with the addon
+    # are cherry picked in setup.cfg
     install_requires=['dateutils']
 )

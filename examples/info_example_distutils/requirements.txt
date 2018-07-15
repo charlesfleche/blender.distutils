@@ -1,2 +1,9 @@
+# This module adds the setup.py bdist_blender_addon command
+
 blender.distutils
+
+# This module is required by the addon, but not distributed with blender
+# bdist_blender_addon will ship it if with the addon
+# Dependencies to be inclued are listed in setup.cfg
+
 dateutils
