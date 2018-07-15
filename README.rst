@@ -7,7 +7,7 @@ Blender distutils commands
 This Python module adds a new command to
 `distutils <https://docs.python.org/3/library/distutils.html>`_ to build `Blender <https://blender.org>`__ addons: ``bdist_blender_addon``. It also provides a simple mechanism to package extra modules not included with Blender's Python distribution within the addon.
 
-*This project originates from the python plugins (`Cinema4D<https://github.com/Previz-app/Py-Previz>`_ and `Blender<https://github.com/Previz-app/io_scene_previz/>`_) written for `Previz<https://previz.co/>`_, an online tool to plan and preview live events content in a real-time 3D environment. Those plugins requires to ship a custom REST API wrapper python module: the ``bdist_blender_addon`` command automates the process of building releases.*
+    This project originates from the python plugins (`Cinema4D <https://github.com/Previz-app/Py-Previz>`_ and `Blender <https://github.com/Previz-app/io_scene_previz/>`_) written for `Previz<https://previz.co/>`_, an online tool to plan and preview live events content in a real-time 3D environment. Those plugins require to ship a custom REST API wrapper python module: the ``bdist_blender_addon`` command automates the process of building releases.
 
 Example
 -------
