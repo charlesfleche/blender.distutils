@@ -1,10 +1,18 @@
 from distutils.core import Command
-from distutils.dir_util import copy_tree, remove_tree
+from distutils.dir_util import copy_tree, remove_tree, mkpath
+from distutils.file_util import copy_file, write_file
 from importlib.util import find_spec
 from pathlib import Path
 
 def spec2path(spec):
-    return Path(spec.origin).parent
+    if spec.origin.endswith("__init__.py"):
+        # This works for most packages that are __init__.py based.
+        print("Blender.DistUtils: Found full package to copy: " + spec.name)
+        return (Path(spec.origin).parent,True)
+    else:
+        # This is a fix for single-file packages that don't have __init__.py.
+        print("Blender.DistUtils: Found single file to copy: "+ spec.name)
+        return (Path(spec.origin),False)
 
 class bdist_blender_addon(Command):
     description = "Build Blender addon"
@@ -33,7 +41,21 @@ class bdist_blender_addon(Command):
 
         for name in self.addon_require:
             p = spec2path(find_spec(name))
-            copy_tree(str(p), str(build_addon/name))
+            if(p[1]):
+                structure = name.split(".")
+                if len(structure) > 1:
+                    # Need to create separate files for it
+                    print("Splitting the compound directory")
+                    destination = build_addon
+                    for pathsection in structure:
+                        destination = destination / pathsection
+                        mkpath(str(destination))
+                        write_file(str(destination / "__init__.py"),"")
+                    copy_tree(str(p[0]), str(destination))
+                else:
+                    copy_tree(str(p[0]), str(build_addon/name))
+            else:
+                copy_file(str(p[0]), str(build_addon))
 
         for pycache in build_addon.glob('**/__pycache__'):
             remove_tree(str(pycache))
